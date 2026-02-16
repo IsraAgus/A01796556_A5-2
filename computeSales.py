@@ -10,7 +10,8 @@ El programa:
 2) Lee un registro de ventas (JSON: lista de objetos con 'Product' y 'Quantity').
 3) Calcula el costo total (sum(price[Product] * Quantity)).
 4) Maneja datos inválidos: reporta en consola y continúa.
-5) Imprime resultados en consola y guarda SalesResults.txt incluyendo tiempo transcurrido.
+5) Imprime resultados en consola y guarda SalesResults.txt incluyendo tiempo
+   transcurrido.
 """
 
 from __future__ import annotations
@@ -29,6 +30,7 @@ RESULTS_FILE = "SalesResults.txt"
 @dataclass(frozen=True)
 class SaleLine:
     """Representa una línea de venta validada."""
+
     product: str
     quantity: float
 
@@ -68,7 +70,11 @@ def build_price_lookup(catalog_data: Any) -> dict[str, float]:
             continue
 
         if not isinstance(price, (int, float)):
-            print(f"[CATALOG ERROR] Item {idx} '{title}' missing valid 'price'. Skipping.")
+            msg = (
+                f"[CATALOG ERROR] Item {idx} '{title}' missing valid 'price'. "
+                "Skipping."
+            )
+            print(msg)
             continue
 
         prices[title] = float(price)
@@ -102,9 +108,11 @@ def parse_sales_lines(sales_data: Any) -> list[SaleLine]:
             continue
 
         if not isinstance(quantity, (int, float)):
-            print(
-                f"[SALES ERROR] Line {idx} '{product}' missing valid 'Quantity'. Skipping."
+            msg = (
+                f"[SALES ERROR] Line {idx} '{product}' missing valid 'Quantity'. "
+                "Skipping."
             )
+            print(msg)
             continue
 
         lines.append(SaleLine(product=product, quantity=float(quantity)))
@@ -113,15 +121,19 @@ def parse_sales_lines(sales_data: Any) -> list[SaleLine]:
 
 
 def compute_total_cost(prices: dict[str, float], sales_lines: list[SaleLine]) -> float:
-    """Calcula el total. Si el producto no existe en el catálogo, reporta y continúa."""
+    """Calcula el total.
+
+    Si el producto no existe en el catálogo, reporta y continúa.
+    """
     total = 0.0
 
     for idx, line in enumerate(sales_lines):
         if line.product not in prices:
-            print(
-                f"[MISSING PRODUCT] Line {idx}: '{line.product}' not found in catalogue. "
-                "Skipping."
+            msg = (
+                f"[MISSING PRODUCT] Line {idx}: '{line.product}' not found in "
+                "catalogue. Skipping."
             )
+            print(msg)
             continue
 
         total += prices[line.product] * line.quantity

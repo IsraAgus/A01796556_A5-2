@@ -1,10 +1,6 @@
-import sys
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT_DIR))
-
-from computeSales import (  # noqa: E402
+from computeSales import (
     build_price_lookup,
     compute_total_cost,
     parse_sales_lines,
