@@ -1,0 +1,56 @@
+
+```gitignore
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# ==========================
+# Pytest
+# ==========================
+.pytest_cache/
+coverage.xml
+htmlcov/
+
+# ==========================
+# IDEs
+# ==========================
+.vscode/
+.idea/
+
+# ==========================
+# MacOS
+# ==========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ==========================
+# Logs
+# ==========================
+*.log
+
+# ==========================
+# Generated output
+# ==========================
+SalesResults.txt
+
+# ==========================
+# Jupyter (por si acaso)
+# ==========================
+.ipynb_checkpoints/
