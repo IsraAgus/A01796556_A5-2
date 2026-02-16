@@ -1,0 +1,17 @@
+Sales Results
+=============
+Total cost: $2,481.86
+Elapsed time: 0.000563 seconds
+
+Sales Results
+=============
+Total cost: $166,568.23
+Elapsed time: 0.000360 seconds
+
+[MISSING PRODUCT] Line 21: 'Elotes' not found in catalogue. Skipping.
+[MISSING PRODUCT] Line 35: 'Frijoles' not found in catalogue. Skipping.
+Sales Results
+=============
+Total cost: $165,235.37
+Elapsed time: 0.000375 seconds
+
