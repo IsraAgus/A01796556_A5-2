@@ -1,0 +1,12 @@
+[MASTER]
+py-version=3.11
+ignore=.venv,venv,build,dist,__pycache__,.pytest_cache
+
+[MESSAGES CONTROL]
+disable=
+    missing-module-docstring,
+    missing-class-docstring,
+    C0103
+
+[FORMAT]
+max-line-length=88

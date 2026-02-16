@@ -1,0 +1,11 @@
+************* Module computeSales
+computeSales.py:13:0: C0301: Line too long (90/88) (line-too-long)
+computeSales.py:71:0: C0301: Line too long (91/88) (line-too-long)
+computeSales.py:106:0: C0301: Line too long (91/88) (line-too-long)
+computeSales.py:122:0: C0301: Line too long (90/88) (line-too-long)
+computeSales.py:184:0: C0304: Final newline missing (missing-final-newline)
+computeSales.py:1:0: C0103: Module name "computeSales" doesn't conform to snake_case naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 9.33/10 (previous run: 9.33/10, +0.00)
+
