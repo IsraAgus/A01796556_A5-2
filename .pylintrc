@@ -1,0 +1,10 @@
+[MASTER]
+py-version=3.11
+
+[MESSAGES CONTROL]
+disable=
+    missing-module-docstring,
+    missing-class-docstring
+
+[FORMAT]
+max-line-length=88
